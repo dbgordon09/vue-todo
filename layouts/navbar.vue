@@ -1,12 +1,16 @@
 <template>
   <header class="navbar">
     <nav class="flex h-full">
-      <a href="/" class="navbar__home h-full pr-4">
+      <nuxt-link to="/" class="navbar__home h-full pr-4">
         <img class="navbar__logo h-full float-left" src="../assets/VueJS-small-logo.png" alt="navbar_logo">
-        <h4 class="navbar__title h-full float-right hidden sm:block">Vue ToDo</h4>
-      </a>
+        <h4 class="navbar__title h-full float-right hidden sm:block">
+          Vue ToDo
+        </h4>
+      </nuxt-link>
       <div v-for="(link, index) in links" :key="index" class="h-full table">
-        <a :href="link.url" class="navbar__links h-full table-cell align-middle">{{ link.title }}</a>
+        <nuxt-link :to="link.url" class="navbar__links h-full table-cell align-middle">
+          {{ link.title }}
+        </nuxt-link>
       </div>
     </nav>
   </header>
