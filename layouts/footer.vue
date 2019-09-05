@@ -1,5 +1,5 @@
 <template>
-  <header class="navbar">
+  <footer class="footer">
     <nav class="flex h-full">
       <nuxt-link to="/" class="navbar__home h-full pr-4">
         <img class="navbar__logo h-full float-left" src="../assets/VueJS-small-logo.png" alt="navbar_logo">
@@ -13,7 +13,7 @@
         </nuxt-link>
       </div>
     </nav>
-  </header>
+  </footer>
 </template>
 
 <script>
@@ -39,12 +39,12 @@ const links = [
 </script>
 
 <style scoped>
-.navbar {
-  background-color: #3B8070;
-  box-shadow: 0 0 4px 4px #F5F5F5;
+.footer {
+  background-color: #35495E;
+  color: white;
   height: 64px;
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
 }
 .navbar__home:hover {
   background-color: rgba(255, 255, 255, 0.075);
@@ -56,7 +56,7 @@ const links = [
   padding: 8px 0 8px 16px;
 }
 .navbar__title {
-  color: #35495e;
+  color: #3B8070;
   letter-spacing: 4px;
   line-height: 64px;
 }
@@ -71,7 +71,7 @@ const links = [
   background-color: rgba(255, 255, 255, 0.075);
   text-shadow: 1px 2px 2px #35495e;
   transition: text-shadow 0.15s ease-in;
-  transform: scale(1.05);
   transition: transform 0.15s ease-in;
+  transform: scale(1.05);
 }
 </style>

@@ -45,12 +45,13 @@ export default {
 }
 */
 .container {
-  margin: 0 auto;
-  min-height: 100vh;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 16px 0;
   text-align: center;
+  margin: 0 auto;
+  min-height: calc(100vh - 64px - 64px);
 }
 
 .title {

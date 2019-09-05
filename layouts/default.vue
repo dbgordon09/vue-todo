@@ -1,18 +1,20 @@
 <template>
-  <div>
+  <div class="flex flex-col h-full">
     <navbar />
     <nuxt />
+    <navbottom />
   </div>
 </template>
 
 <script>
 import navbar from './navbar'
+import navbottom from './footer'
 
 export default {
   components: {
-    navbar
+    navbar,
+    navbottom
   }
-
 }
 </script>
 
