@@ -2,10 +2,7 @@
   <footer class="footer">
     <nav class="flex h-full">
       <nuxt-link to="/" class="navbar__home h-full pr-4">
-        <img class="navbar__logo h-full float-left" src="../assets/VueJS-small-logo.png" alt="navbar_logo">
-        <h4 class="navbar__title h-full float-right hidden sm:block">
-          Vue ToDo
-        </h4>
+        <img class="navbar__logo h-full float-left" src="../assets/images/VueJS-small-logo.png" alt="navbar_logo">
       </nuxt-link>
       <div v-for="(link, index) in links" :key="index" class="h-full table">
         <nuxt-link :to="link.url" class="navbar__links h-full table-cell align-middle">
@@ -31,6 +28,7 @@ class Link {
     this.url = url
   }
 }
+
 const links = [
   new Link('Home', '/'),
   new Link('ToDo', '/todo'),
@@ -38,11 +36,14 @@ const links = [
 ]
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import '../assets/css/colors.scss';
+@import '../assets/css/dimens.scss';
+
 .footer {
-  background-color: #35495E;
+  background-color: $brand--color--dark;
   color: white;
-  height: 64px;
+  height: $footer--height;
   width: 100%;
   overflow: hidden;
 }
@@ -54,11 +55,6 @@ const links = [
 }
 .navbar__logo {
   padding: 8px 0 8px 16px;
-}
-.navbar__title {
-  color: #3B8070;
-  letter-spacing: 4px;
-  line-height: 64px;
 }
 .navbar__links {
   color: white;

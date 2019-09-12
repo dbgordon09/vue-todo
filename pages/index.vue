@@ -38,18 +38,15 @@ export default {
 }
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
+<style lang="scss">
+@import '../assets/css/dimens.scss';
+
 .container {
   align-items: center;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  min-height: calc(100vh - 64px - 64px);
+  min-height: calc(100vh - #{$navbar--height} - #{$footer--height});
   padding: 16px 0;
   text-align: center;
 }

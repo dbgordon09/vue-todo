@@ -2,7 +2,7 @@
   <header class="navbar">
     <nav class="flex h-full">
       <nuxt-link to="/" class="navbar__home h-full pr-4">
-        <img class="navbar__logo h-full float-left" src="../assets/VueJS-small-logo.png" alt="navbar_logo">
+        <img class="navbar__logo h-full float-left" src="../assets/images/VueJS-small-logo.png" alt="navbar_logo">
         <h4 class="navbar__title h-full float-right hidden sm:block">
           Vue ToDo
         </h4>
@@ -31,6 +31,7 @@ class Link {
     this.url = url
   }
 }
+
 const links = [
   new Link('Home', '/'),
   new Link('ToDo', '/todo'),
@@ -38,11 +39,14 @@ const links = [
 ]
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import '../assets/css/colors.scss';
+@import '../assets/css/dimens.scss';
+
 .navbar {
-  background-color: #3B8070;
+  background-color: $brand--color;
   box-shadow: 0 0 4px 4px #F5F5F5;
-  height: 64px;
+  height: $navbar--height;
   overflow: hidden;
   width: 100%;
 }
@@ -56,7 +60,7 @@ const links = [
   padding: 8px 0 8px 16px;
 }
 .navbar__title {
-  color: #35495e;
+  color: $brand--color--dark;
   letter-spacing: 4px;
   line-height: 64px;
 }

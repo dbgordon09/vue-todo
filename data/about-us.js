@@ -1,5 +1,4 @@
-import dale from '@/assets/dale-about-us.png'
-import justin from '@/assets/dale-about-us.png'
+import dale from '@/assets/images/dale-about-us.png'
 
 class Person {
   constructor (name, image, description) {
@@ -11,5 +10,5 @@ class Person {
 
 export default [
   new Person('Dale Gordon', dale, 'JavaScript, music and hiking enthusiast'),
-  new Person('Justin Hoffman', justin, 'Overall sick oak :D')
+  new Person('Justin Hoffman', dale, 'Overall sick oak :D')
 ]

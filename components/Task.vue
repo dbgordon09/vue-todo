@@ -2,7 +2,7 @@
   <div class="flex items-center todo__list_item p-2">
     <input type="checkbox" :checked="task.done" @change="toggle(task)">
     <span :class="{ done: task.done }" class="p-2 flex-1">{{ task.text }}</span>
-    <img src="../assets/todo-remove.svg" alt="Remove Task" class="todo__remove invisible" @click="remove(task)">
+    <img src="../assets/images/todo-remove.svg" alt="Remove Task" class="todo__remove invisible" @click="remove(task)">
   </div>
 </template>
 
